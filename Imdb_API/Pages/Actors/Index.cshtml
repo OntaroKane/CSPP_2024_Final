@@ -1,0 +1,49 @@
+﻿@page
+@model Imdb_API.Pages.Actors.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name_basic[0].primaryname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name_basic[0].birthyear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name_basic[0].deathyear)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.name_basic) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.primaryname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.birthyear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.deathyear)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.nconst">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.nconst">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.nconst">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

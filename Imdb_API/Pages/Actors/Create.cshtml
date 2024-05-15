@@ -1,0 +1,50 @@
+﻿@page
+@model Imdb_API.Pages.Actors.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>name_basic</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="name_basic.nconst" class="control-label"></label>
+                <input asp-for="name_basic.nconst" class="form-control" />
+                <span asp-validation-for="name_basic.nconst" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="name_basic.primaryname" class="control-label"></label>
+                <input asp-for="name_basic.primaryname" class="form-control" />
+                <span asp-validation-for="name_basic.primaryname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="name_basic.birthyear" class="control-label"></label>
+                <input asp-for="name_basic.birthyear" class="form-control" />
+                <span asp-validation-for="name_basic.birthyear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="name_basic.deathyear" class="control-label"></label>
+                <input asp-for="name_basic.deathyear" class="form-control" />
+                <span asp-validation-for="name_basic.deathyear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
