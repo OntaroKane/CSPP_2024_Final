@@ -1,88 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9A877E26-75F1-4F6F-A5F6-1C0433A471A4}|Imdb_API.csproj|c:\\users\\ontar\\source\\repos\\imdb_api\\identity\\requiresclaimattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A877E26-75F1-4F6F-A5F6-1C0433A471A4}|Imdb_API.csproj|solutionrelative:identity\\requiresclaimattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A877E26-75F1-4F6F-A5F6-1C0433A471A4}|Imdb_API.csproj|c:\\users\\ontar\\source\\repos\\imdb_api\\identity\\identitydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A877E26-75F1-4F6F-A5F6-1C0433A471A4}|Imdb_API.csproj|solutionrelative:identity\\identitydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A877E26-75F1-4F6F-A5F6-1C0433A471A4}|Imdb_API.csproj|c:\\users\\ontar\\source\\repos\\imdb_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9A877E26-75F1-4F6F-A5F6-1C0433A471A4}|Imdb_API.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A877E26-75F1-4F6F-A5F6-1C0433A471A4}|Imdb_API.csproj|c:\\users\\ontar\\source\\repos\\imdb_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A877E26-75F1-4F6F-A5F6-1C0433A471A4}|Imdb_API.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-15T11:48:53.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T11:48:12.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RequiresClaimAttribute.cs",
-              "DocumentMoniker": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\Identity\\RequiresClaimAttribute.cs",
-              "RelativeDocumentMoniker": "Identity\\RequiresClaimAttribute.cs",
-              "ToolTip": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\Identity\\RequiresClaimAttribute.cs",
-              "RelativeToolTip": "Identity\\RequiresClaimAttribute.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T11:46:07.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IdentityData.cs",
-              "DocumentMoniker": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\Identity\\IdentityData.cs",
-              "RelativeDocumentMoniker": "Identity\\IdentityData.cs",
-              "ToolTip": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\Identity\\IdentityData.cs",
-              "RelativeToolTip": "Identity\\IdentityData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-15T11:46:04.98Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

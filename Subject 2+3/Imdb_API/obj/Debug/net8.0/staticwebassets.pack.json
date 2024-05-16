@@ -9,6 +9,26 @@
       "PackagePath": "staticwebassets\\html\\Index.html"
     },
     {
+      "Id": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\wwwroot\\html\\ko.html",
+      "PackagePath": "staticwebassets\\html\\ko.html"
+    },
+    {
+      "Id": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\wwwroot\\js\\RequireJS 2.3.6.js",
+      "PackagePath": "staticwebassets\\js\\RequireJS 2.3.6.js"
+    },
+    {
+      "Id": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\wwwroot\\js\\jQuery v3.7.1.js",
+      "PackagePath": "staticwebassets\\js\\jQuery v3.7.1.js"
+    },
+    {
+      "Id": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\wwwroot\\js\\ko.js",
+      "PackagePath": "staticwebassets\\js\\ko.js"
+    },
+    {
+      "Id": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
       "Id": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

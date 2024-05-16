@@ -18,3 +18,5 @@ function userViewModel() {
 };
 
 ko.applyBindings(new userViewModel());
+
+
