@@ -25,7 +25,7 @@ namespace Imdb_API.Controllers
         }
 
         // GET: api/Users1
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
@@ -33,7 +33,7 @@ namespace Imdb_API.Controllers
         }
 
         // GET: api/Users1/5
-        [AllowAnonymous]
+        //[AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(Guid id)
         {
@@ -49,7 +49,7 @@ namespace Imdb_API.Controllers
 
         // PUT: api/Users1/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [Authorize]
+        //[Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(Guid id, User user)
         {
@@ -81,7 +81,7 @@ namespace Imdb_API.Controllers
 
         // POST: api/Users1
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         public async Task<ActionResult<User>> PostUser(User user)
         {
@@ -92,8 +92,8 @@ namespace Imdb_API.Controllers
         }
 
         // DELETE: api/Users1/5
-        [Authorize]
-        [RequiresClaim(IdentityData.AdminUserClaimName,"true")]
+        //[Authorize]
+        //[RequiresClaim(IdentityData.AdminUserClaimName,"true")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(Guid id)
         {

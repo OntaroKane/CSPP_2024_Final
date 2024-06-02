@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "X0oKqkARqWLJhWU6crIpCexAnUsvZc5sqGYiRqMmn/I=",
+  "Hash": "vwu5UtU369/riCvHt2wdXYIIxyL9k+GACcGSrGnTfso=",
   "Source": "Imdb_API",
   "BasePath": "_content/Imdb_API",
   "Mode": "Default",
@@ -74,12 +74,12 @@
       "OriginalItemSpec": "wwwroot\\html\\ko.html"
     },
     {
-      "Identity": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\wwwroot\\js\\jQuery v3.7.1.js",
+      "Identity": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\wwwroot\\js\\dbFunctionsCall.js",
       "SourceId": "Imdb_API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\wwwroot\\",
       "BasePath": "_content/Imdb_API",
-      "RelativePath": "js/jQuery v3.7.1.js",
+      "RelativePath": "js/dbFunctionsCall.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,7 +90,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\jQuery v3.7.1.js"
+      "OriginalItemSpec": "wwwroot\\js\\dbFunctionsCall.js"
     },
     {
       "Identity": "C:\\Users\\ontar\\source\\repos\\Imdb_API\\wwwroot\\js\\ko.js",

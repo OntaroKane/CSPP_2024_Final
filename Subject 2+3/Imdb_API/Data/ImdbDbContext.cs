@@ -22,6 +22,7 @@ public partial class ImdbDbContext : DbContext
 
     public DbSet<User> Users { get; set; }
 
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
          => optionsBuilder.UseNpgsql("Server=localhost;Port=5432;User Id=postgres;Password=123456;Database=imdb;");
 

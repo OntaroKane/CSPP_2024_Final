@@ -6,10 +6,12 @@
 
     <title>Data Binding Frontend</title>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css" />
+
     <script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
@@ -31,9 +33,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="https://localhost:7126/swagger/index.html">API - Swagger</a>
                     </li>
@@ -42,25 +42,31 @@
                             Database Functions
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">string_search()</a></li>
-                            <li><a class="dropdown-item" href="#">rate_movie()</a></li>
-                            <li><a class="dropdown-item" href="#">search_4values()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="string_search('batman')">string_search()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="rate_movie()">rate_movie()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="search_4values()">search_4values()</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">search_actor()</a></li>
-                            <li><a class="dropdown-item" href="#">search_costar()</a></li>
-                            <li><a class="dropdown-item" href="#">name_rating()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="search_actor()">search_actor()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="search_costar()">search_costar()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="name_rating()">name_rating()</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">popular_actors()</a></li>
-                            <li><a class="dropdown-item" href="#">similarmovies()</a></li>
-                            <li><a class="dropdown-item" href="#">best_search()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="popular_actors()">popular_actors()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="similarmovies('matares')">similarmovies()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="best_search()">best_search()</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">exact_search()</a></li>
-                            <li><a class="dropdown-item" href="#">best2_search()</a></li>
-                            <li><a class="dropdown-item" href="#">wtw_query()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="exact_search()">exact_search()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="best2_search()">best2_search()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="wtw_query()">wtw_query()</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Procedures</a>
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" onclick="retriveUsers()">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" onclick="retriveMovies()">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" onclick="retriveActors()">Actors</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -71,52 +77,49 @@
         </div>
     </nav>
 
-    <div class="container">
-        <table class="table table-fluid display" id="myTable">
-            <thead>
-                <tr><th>UserID</th><th>Username</th><th>Password</th><th>Email</th><th>Time Created</th><th>Last Login</th></tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-bind='text: userUserid'></td>
-                    <td data-bind='text: userUsername'></td>
-                    <td data-bind='text: userPassword'></td>
-                    <td data-bind='text: userEmail'></td>
-                    <td data-bind='text: createdAt'></td>
-                    <td data-bind='text: lastLogin'></td>
-                </tr>
-            </tbody>
-        </table>
-        <p><span data-bind='text: fullInfo'></span></p>
-        <button data-bind='click: changeUserId'>Change !</button>
-        <br><br>
-        <button id="addRow">New Row</button>
-    </div>
+    <!-- <div class="container">
+            <table class="table table-fluid display" id="myTable">
+                <thead>
+                    <tr><th>UserID</th><th>Username</th><th>Password</th><th>Email</th><th>Time Created</th><th>Last Login</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-bind='text: userUserid'></td>
+                        <td data-bind='text: userUsername'></td>
+                        <td data-bind='text: userPassword'></td>
+                        <td data-bind='text: userEmail'></td>
+                        <td data-bind='text: createdAt'></td>
+                        <td data-bind='text: lastLogin'></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><span data-bind='text: fullInfo'></span></p>
+            <button data-bind='click: changeUserId'>Change !</button>
+            <br><br>
+            <button id="addRow">New Row</button>
+        </div>
+    -->
 
+    <button onclick="createUser('andrei','123789312','they@them.com')">Create User!</button>
+    <button onclick="editUser('tt9460980','tvSeries','Wednesday')">Edit User!</button>
+    <button onclick="deleteUser('')">Delete User!</button>
+
+
+    <button onclick="createActor('Jackie','1960','2060')">Create Actor!</button>
+    <button onclick="editActor('tt9460980','tvSeries','Wednesday')">Edit Actor!</button>
+    <button onclick="deleteActor('')">Delete Actor!</button>
+
+    <button onclick="createMovie('movie','Your Life')">Create Movie!</button>
+    <button onclick="editMovie('tt9460980','tvSeries','Wednesday')">Edit Movie!</button>
+    <button onclick="deleteMovie('')">Delete Movie!</button>
+
+
+    <div class="container" id="tableContainer"></div>
+
+    <script src="/_framework/aspnetcore-browser-refresh.js"></script>
+    <script type="text/javascript" src="../js/dbFunctionsCall.js"></script>
     <script type="text/javascript" src="../lib/knockout.js/knockout.js"></script>
     <script type="text/javascript" src="../js/site.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('#myTable').DataTable({
-                paging: true,
-                searching: true
-            });
-        });
-
-        $(document).ready(function () {
-            var t = $('#myTable').DataTable();
-            var counter = 1;
-            $('#addRow').on('click', function () {
-                t.row.add([new userViewModel().userUserid, new userViewModel().userUsername, new userViewModel().userPassword,
-                new userViewModel().userEmail, new userViewModel().createdAt, new userViewModel().lastLogin]).draw(false);
-                counter++;
-            });
-            $('#addRow').onclick;
-        });
-
-    </script>
-
 
 </body>
 
