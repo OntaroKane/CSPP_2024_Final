@@ -43,22 +43,58 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#" onclick="string_search('batman')">string_search()</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="rate_movie()">rate_movie()</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="search_4values()">search_4values()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="rate_movie('125','tt78899','10')">rate_movie()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="search_4values('batman','fight','2005','christian bale')">search_4values()</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#" onclick="search_actor()">search_actor()</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="search_costar()">search_costar()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="search_actor('mikkelson')">search_actor()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="search_costar('mikkelson')">search_costar()</a></li>
                             <li><a class="dropdown-item" href="#" onclick="name_rating()">name_rating()</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#" onclick="popular_actors()">popular_actors()</a></li>
                             <li><a class="dropdown-item" href="#" onclick="similarmovies('matares')">similarmovies()</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="best_search()">best_search()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="index_search('death','drama','mads','','')">best_search()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="best_search('death','drama','mads','','')">best_search()</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#" onclick="exact_search()">exact_search()</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="best2_search()">best2_search()</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="wtw_query()">wtw_query()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="exact_search('death','drama')">exact_search()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="best2_search('death','drama','mads','','')">best2_search()</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="wtw_query('happy','paws')">wtw_query()</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Users CRUD Options
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="retriveUsers()">Get Users!</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="createUser('andrei','123789312','they@them.com')">Create User!</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="editUser('3fa85f64-5717-4562-b3fc-2c963f66afa6','username','password','email')">Edit User!</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="deleteUser('')">Delete User!</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Movies CRUD Options
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="retriveMovies()">Get Movies!</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="createMovie('movie','Your Title Here!')">Create Movie!</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="editMovie('tt9460980','tvSeries','Wednesday')">Edit Movie!</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="deleteMovie('tt56435345')">Delete Movie!</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Actors CRUD Options
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="retriveActors()">Get Actors!</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="createActor('Jackie','1960','2060')">Create Actor!</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="editActor('nm9460980','TestActor','1990','2020')">Edit Actor!</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="deleteActor('nm3123213')">Delete Actor!</a></li>
+                        </ul>
+                    </li>
+
+
                     <li class="nav-item">
                         <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" onclick="retriveUsers()">Users</a>
                     </li>
@@ -77,49 +113,217 @@
         </div>
     </nav>
 
-    <!-- <div class="container">
-            <table class="table table-fluid display" id="myTable">
-                <thead>
-                    <tr><th>UserID</th><th>Username</th><th>Password</th><th>Email</th><th>Time Created</th><th>Last Login</th></tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-bind='text: userUserid'></td>
-                        <td data-bind='text: userUsername'></td>
-                        <td data-bind='text: userPassword'></td>
-                        <td data-bind='text: userEmail'></td>
-                        <td data-bind='text: createdAt'></td>
-                        <td data-bind='text: lastLogin'></td>
-                    </tr>
-                </tbody>
-            </table>
-            <p><span data-bind='text: fullInfo'></span></p>
-            <button data-bind='click: changeUserId'>Change !</button>
-            <br><br>
-            <button id="addRow">New Row</button>
+    <div class="parent-container">
+        <div class="container mt-5 d-flex justify-content-start">
+            <form id="myform">
+                <div class="form-group">
+                    <label>First Value</label>
+                    <input type="text" class="form-control" id="firstvalue" placeholder="Value">
+                </div>
+                <div class="form-group">
+                    <label>Second Value</label>
+                    <input type="text" class="form-control" id="secondvalue" placeholder="Value">
+                </div>
+                <div class="form-group">
+                    <label>Third Value</label>
+                    <input type="text" class="form-control" id="thirdvalue" placeholder="Value">
+                </div>
+                <div class="form-group">
+                    <label>Fourth Value</label>
+                    <input type="text" class="form-control" id="fourthvalue" placeholder="Value">
+                </div>
+                <div class="form-group">
+                    <label>Fifth Value</label>
+                    <input type="text" class="form-control" id="fifthvalue" placeholder="Value">
+                </div>
+                <div class="form-group">
+                    <label for="dbfunctions">Database Function & Operations</label>
+                    <select class="form-control" id="dbfunctions">
+                        <option selected>Choose a function!</option>
+                        <option value="string_search()">string_search() - 1V</option>
+                        <option value="rate_movie()">rate_movie() - 3V</option>
+                        <option value="search_4values()">search_4values() - 4V</option>
+                        <option value="search_actor()">search_actor() - 1V</option>
+                        <option value="search_costar()">search_costar() - 1V</option>
+                        <option value="name_rating()">name_rating() - 1V</option>
+                        <option value="popular_actors()">popular_actors() - 0V</option>
+                        <option value="similarmovies()">similarmovies() - 1V</option>
+                        <option value="best_search()">index_search() - 5V</option>
+                        <option value="best_search()">best_search() - 5V</option>
+                        <option value="exact_search()">exact_search() - 2V</option>
+                        <option value="best2_search()">best2_search() - 5V</option>
+                        <option value="createUser()">Create User! - 3V</option>
+                        <option value="editUser()">Edit User! - 4V</option>
+                        <option value="deleteUser()">Delete User! - 1V</option>
+                        <option value="createMovie()">Create Movie! - 2V</option>
+                        <option value="editMovie()">Edit Movie! - 3V</option>
+                        <option value="deleteMovie()">Delete Movie! - 1V</option>
+                        <option value="createActor()">Create Actor! - 3V</option>
+                        <option value="editActor()">Edit Actor! - 4V</option>
+                        <option value="deleteActor()">Delete Actor! - 1V</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="resultfield">Results!</label>
+                    <textarea class="form-control" id="resultfield" name="w3review" rows="4" cols="50"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
-    -->
-
-    <button onclick="createUser('andrei','123789312','they@them.com')">Create User!</button>
-    <button onclick="editUser('tt9460980','tvSeries','Wednesday')">Edit User!</button>
-    <button onclick="deleteUser('')">Delete User!</button>
-
-
-    <button onclick="createActor('Jackie','1960','2060')">Create Actor!</button>
-    <button onclick="editActor('tt9460980','tvSeries','Wednesday')">Edit Actor!</button>
-    <button onclick="deleteActor('')">Delete Actor!</button>
-
-    <button onclick="createMovie('movie','Your Life')">Create Movie!</button>
-    <button onclick="editMovie('tt9460980','tvSeries','Wednesday')">Edit Movie!</button>
-    <button onclick="deleteMovie('')">Delete Movie!</button>
-
-
-    <div class="container" id="tableContainer"></div>
+        <div class="container" id="tableContainer"></div>
+    </div>
 
     <script src="/_framework/aspnetcore-browser-refresh.js"></script>
     <script type="text/javascript" src="../js/dbFunctionsCall.js"></script>
     <script type="text/javascript" src="../lib/knockout.js/knockout.js"></script>
     <script type="text/javascript" src="../js/site.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            var form = document.getElementById('myform'); 
+            
+            form.addEventListener('submit', function (event) {
+
+                event.preventDefault();
+
+                var firstValue = document.getElementById('firstvalue').value;
+                var secondValue = document.getElementById('secondvalue').value;
+                var thirdValue = document.getElementById('thirdvalue').value;
+                var fourthValue = document.getElementById('fourthvalue').value;
+                var fifthValue = document.getElementById('fifthvalue').value;
+
+                
+                var databaseFunction = document.getElementById('dbfunctions').value;
+
+                
+                console.log("First Value:", firstValue);
+                console.log("Second Value:", secondValue);
+                console.log("Third Value:", thirdValue);
+                console.log("Fourth Value:", fourthValue);
+                console.log("Fifth Value:", fifthValue);
+                console.log("Selected Database Function:", databaseFunction);
+
+                var result;
+
+                switch (databaseFunction) {
+                    case "string_search()":
+
+                        result = JSON.stringify(string_search(firstValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "search_actor()":
+                        result = JSON.stringify(search_actor(firstValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "similarmovies()":
+                        result = JSON.stringify(similarmovies(firstValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "search_costar()":
+                        result = JSON.stringify(search_costar(firstValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "wtw_query()":
+                        result = JSON.stringify(wtw_query(firstValue, secondValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "search_4values()":
+                        result = JSON.stringify(search_4values(firstValue, secondValue, thirdValue, fourthValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "rate_movie()":
+                        result = JSON.stringify(rate_movie(firstValue, secondValue, thirdValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "popular_actors()":
+                        result = JSON.stringify(popular_actors());
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "name_rating()":
+                        result = JSON.stringify(name_rating(firstValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "index_search()":
+                        result = JSON.stringify(index_search(firstValue, secondValue, thirdValue, fourthValue, fifthValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "exact_search()":
+                        result = JSON.stringify(exact_search(firstValue, secondValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "best_search()":
+                        result = JSON.stringify(best_search(firstValue, secondValue, thirdValue, fourthValue, fifthValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "best2_search()":
+                        result = JSON.stringify(best2_search(firstValue, secondValue, thirdValue, fourthValue, fifthValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "createUser()":
+                        result = JSON.stringify(createUser(firstValue, secondValue, thirdValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "createActor()":
+                        result = JSON.stringify(createActor(firstValue, secondValue, thirdValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "createMovie()":
+                        result = JSON.stringify(createMovie(firstValue, secondValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "deleteUser()":
+                        result = JSON.stringify(deleteUser(firstValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "deleteMovie()":
+                        result = JSON.stringify(deleteMovie(firstValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "deleteActor()":
+                        result = JSON.stringify(deleteActor(firstValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "editMovie()":
+                        result = JSON.stringify(editMovie(firstValue, secondValue, thirdValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "editUser()":
+                        result = JSON.stringify(editUser(firstValue, secondValue, thirdValue, fourthValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    case "editActor()":
+                        result = JSON.stringify(editActor(firstValue, secondValue, thirdValue, fourthValue));
+                        console.log(result);
+                        document.getElementById('resultfield').value = String(result);
+                        break;
+                    default:
+                        console.log("No valid option selected.");
+                }
+            });
+        });
+    </script>
 
 </body>
 

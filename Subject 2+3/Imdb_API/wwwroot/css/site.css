@@ -41,3 +41,17 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
+
+
+.parent-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#tableContainer {
+    /* Additional styling if needed */
+}
+
+.mt-5 {
+    margin-top: 20px; /* Adjust as needed */
+}

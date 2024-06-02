@@ -344,27 +344,15 @@ function retriveUsers() {
             tableBody += row;
         });
 
-        // Combine the header and body
+
         const tableHtml = `<table class="table table-fluid display" id="myTable">${tableHeader}${tableBody}</table>`;
 
-        // Append the table to the container
         document.getElementById('tableContainer').innerHTML = tableHtml;
 
-        $(document).ready(function () {
-            $('#myTable').DataTable({
-                paging: true,
-                pageLength: 25,
-                lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
-                columns: columns
-            });
-        });
-
         var viewModel = new userViewModel();
-        console.log(data);
 
         viewModel = data;
-
-        console.log(JSON.stringify(viewModel));
+        
     });
 }
 
@@ -394,27 +382,14 @@ function retriveMovies() {
             tableBody += row;
         });
 
-        // Combine the header and body
         const tableHtml = `<table class="table table-fluid display" id="myTable">${tableHeader}${tableBody}</table>`;
 
-        // Append the table to the container
         document.getElementById('tableContainer').innerHTML = tableHtml;
 
-        $(document).ready(function () {
-            $('#myTable').DataTable({
-                paging: true,
-                pageLength: 25,
-                lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
-                columns: columns
-            });
-        });
-
         var viewModel = new userViewModel();
-        console.log(data);
 
         viewModel = data;
-
-        console.log(JSON.stringify(viewModel));
+        
     });
 }
 
@@ -431,7 +406,6 @@ function retriveActors() {
         });
         tableHeader += '</tr>';
 
-        // Start building the table body
         let tableBody = '';
         data.forEach(entry => {
             let row = '<tr>';
@@ -448,23 +422,11 @@ function retriveActors() {
 
         document.getElementById('tableContainer').innerHTML = tableHtml;
 
-        $(document).ready(function () {
-            $('#myTable').DataTable({
-                paging: true,
-                pageLength: 25,
-                lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
-                columns: columns
-            });
-        });
-
-
-
         var viewModel = new userViewModel();
-        console.log(data);
+        
 
         viewModel = data;
-
-        console.log(JSON.stringify(viewModel));
+        
     });
 }
 
@@ -619,7 +581,7 @@ function editMovie(tconst, titletype, primarytitle) {
 
 }
 
-function editUser(tconst, titletype, primarytitle) {
+function editUser(userid, username, password, email) {
 
     const dataToSend = JSON.stringify({
         userid: userid,
@@ -648,7 +610,7 @@ function editUser(tconst, titletype, primarytitle) {
 
 }
 
-function editActor(tconst, titletype, primarytitle) {
+function editActor(nconst, primaryname, birthyear, deathyear) {
 
     const dataToSend = JSON.stringify({
         nconst: nconst,
